@@ -1,12 +1,75 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Webpack</title>
-    <link rel="stylesheet" href="style.0b39673c143cdf250ebd.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="style.cb448c1a0603ddd7f475.css">
 </head>
 <body>
-    <h1>Hello</h1>
-    <script src="main.31aa8026d22272c4a9f8.js"></script>
+   
+    
+  <div class="root">
+    <header class="header root__section">
+      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+    </header>
+    <div class="profile root__section">
+      <div class="user-info">
+        <div class="user-info__photo"></div>
+        <div class="user-info__data">
+          <h1 class="user-info__name"></h1>
+          <p class="user-info__job"></p>
+          <button class="button-edit user-edit__button">Edit</button>
+        </div>
+        <button class="button-add user-info__button">+</button>
+      </div>
+    </div>
+    <div class="places-list root__section">   </div>
+
+    <div class="popup">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" class="popup__close">
+        <h3 class="popup__title">Новое место</h3>
+        <form class="popup__form" name="newImagefu">
+            <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Название">
+            <input type="text" name="link" class="popup__input popup__input_type_link-url" placeholder="Ссылка на картинку">
+            <button type class="button-add_plus popup__button" disabled="true">+</button>
+        </form>
+      </div>
+    </div>
+     <div class="popupEdit">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" class="popupEdit__close">
+        <h3 class="popup__title">Редактирование</h3>
+        <form class="popup__form" name="newNameJob">
+            <input type="text" name="secondName" class="popup__input popup__input_type_userName" placeholder="Имя">
+            <p class='errorSecondName'></p>
+            <input type="text" name="job" class="popup__input popup__input_type_userJob" placeholder="Место работы">
+            <p class="errorJob"></p>
+            <button class="button-edit_Name popup__button" disabled="true" >Сохранить</button>
+                  </form>
+      </div>
+    </div>
+    <div class="popupPhoto">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" class="popupPhoto__close">
+        <h3 class="popup__title">Обновить аватар</h3>
+        <form class="popup__form" name="newPhoto">
+          <input type="text" name="avatarPhoto" class="popup__input popup__input_type_urlAvatar" placeholder="Аватар">
+          <p class="errorAvatarPhoto"></p>
+          <button class="button-avatar__Photo popup__button" disabled="true" >Сохранить</button>
+        </form>
+      </div>
+    </div>
+    <div class="imageOpen">
+        <img class="imageOpen__img">
+           <img src="./images/close.svg" alt="" class="imageOpen__close">
+    </div>
+    <script src="main.6d89d5a5e53a070178b0.js"></script>
 </body>
 </html>
+
+<!-- Пример вёрстки карточки: 
+https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg
+-->

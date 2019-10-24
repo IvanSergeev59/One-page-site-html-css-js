@@ -1,0 +1,17 @@
+.button-add_plus.button__disabled {
+background-color:#000000 ;
+border-radius: 2px;
+color:#FFFFFF;
+}
+
+.button-edit_Name.button__disabled {
+background-color:#000000 ;
+border-radius: 2px;
+color:#FFFFFF;
+}
+
+.button-avatar__Photo.button__disabled {
+background-color:#000000 ;
+border-radius: 2px;
+color:#FFFFFF;
+}

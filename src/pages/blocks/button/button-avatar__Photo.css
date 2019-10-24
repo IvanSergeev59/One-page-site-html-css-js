@@ -1,0 +1,15 @@
+.button-avatar__Photo {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  width: 38px;
+  height: 18px;
+  font-size: 10px;
+  display: block;
+  cursor: pointer;
+margin-top:28px;
+}
+
+.button:focus {
+  outline-color: greenyellow;
+}
