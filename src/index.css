@@ -1,7 +1,8 @@
  body {
   background-color: #000;
 }
-
+@import url(vendor/normalize.css);
+@import url(vendor/fonts.css);
 @import url(blocks/header/header.css);
 @import url(blocks/root/root.css);
 @import url(blocks/logo/logo.css);

@@ -1,6 +1,6 @@
 .place-card__delete-icon {
-  background-image: url(<%=require('./images/trash-icon.svg')%>)
-center no-repeat;
+  background: url(../../../images/trash-icon.svg) center no-repeat;
+
  
   background-color: transparent;
   border: none;
