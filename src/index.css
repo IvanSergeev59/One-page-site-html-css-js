@@ -1,0 +1,24 @@
+ body {
+  background-color: #000;
+}
+@import url(vendor/normalize.css);
+@import url(vendor/fonts.css);
+@import url(blocks/header/header.css);
+@import url(blocks/root/root.css);
+@import url(blocks/logo/logo.css);
+@import url(blocks/profile/profile.css);
+@import url(blocks/user-info/user-info.css);
+@import url(blocks/button/button-add.css);
+@import url(blocks/button/button-add_plus.css);
+@import url(blocks/button/button-edit.css);
+@import url(blocks/button/button__disabled.css);
+@import url(blocks/button/button-edit_Name.css);
+@import url(blocks/places-list/places-list.css);
+@import url(blocks/popup/popup.css);
+@import url(blocks/popup/popupEdit.css);
+@import url(blocks/popup/popupPhoto.css);
+@import url(blocks/errors/errorSecondName.css);
+@import url(blocks/errors/errorJob.css);
+@import url(blocks/errors/errorAvatarPhoto.css);
+@import url(blocks/place-card/place-card.css);
+@import url(blocks/imageOpen/imageOpen.css);
