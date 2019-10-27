@@ -1,12 +1,12 @@
 
-import {imageOpen} from "../modules/consts.js"
-import {api} from "../modules/apiUrl.js"
-export let Card = class Card {
-  constructor (name, link, cer) {
+import { imageOpen } from "../modules/consts.js"
+import { api } from "../modules/apiUrl.js"
+export class Card {
+  constructor(name, link, cer) {
     this.cardElement = this.createCard(name, link);
-    this.cardElement.querySelector('.place-card__like-icon').addEventListener('click',this.like);
-    this.cardElement.querySelector('.place-card__delete-icon').addEventListener('click',this.remove);
-    this.cardElement.querySelector('.place-card__image').addEventListener('click',this.openImage);
+    this.cardElement.querySelector('.place-card__like-icon').addEventListener('click', this.like);
+    this.cardElement.querySelector('.place-card__delete-icon').addEventListener('click', this.remove);
+    this.cardElement.querySelector('.place-card__image').addEventListener('click', this.openImage);
 
 
   }
@@ -20,13 +20,13 @@ export let Card = class Card {
     const newButtonLike = document.createElement('button-add');
     newImage.classList.add('place-card');
     newImage.appendChild(newCardImage);
-    newCardImage.classList.add('place-card__image'); 
+    newCardImage.classList.add('place-card__image');
     newCardImage.setAttribute('style', 'background-image: url(' + linkValue + ')');
 
     newCardImage.appendChild(newButtonDel);
     newButtonDel.classList.add('place-card__delete-icon');
 
-    newImage.appendChild(newCardDescription); 
+    newImage.appendChild(newCardDescription);
     newCardDescription.classList.add('place-card__description');
 
     newCardDescription.appendChild(newCardName);
@@ -40,36 +40,35 @@ export let Card = class Card {
 
   };
 
-  like(event){
+  like(event) {
 
     event.target.classList.toggle('place-card__like-icon_liked');
   };
   /* big image */
-  openImage(){
+  openImage() {
     imageOpen.setAttribute('style', 'background-image:' + event.target.style.backgroundImage);
     imageOpen.classList.add('active');
-    const closeImage=document.querySelector('.imageOpen__close').addEventListener('click',function()
-    {
+    const closeImage = document.querySelector('.imageOpen__close').addEventListener('click', function () {
       imageOpen.classList.remove('active');
     });
   };
 
-  remove(){
-   const imageChild = event.target.closest(`.place-card`);
+  remove() {
+    const imageChild = event.target.closest(`.place-card`);
 
-   function   removeChild (parent,child) {
-    parent.removeChild(child);
-  }
+    function removeChild(parent, child) {
+      parent.removeChild(child);
+    }
 
-  api.removeCard(imageChild.getAttribute('id'))
-    .then(() =>{
-      removeChild(imageList,imageChild)
-    })
-    .catch((err) => {
-      console.log(err); // выведем ошибку в консоль
-    });
+    api.removeCard(imageChild.getAttribute('id'))
+      .then(() => {
+        removeChild(imageList, imageChild)
+      })
+      .catch((err) => {
+        console.log(err); // выведем ошибку в консоль
+      });
 
 
-  event.stopPropagation();
+    event.stopPropagation();
   }
 }
